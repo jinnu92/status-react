@@ -8,8 +8,9 @@
             [status-im.ui.components.toolbar.view :as topbar]
             [status-im.ui.screens.wallet.components.styles :as styles]
             [status-im.ui.components.text-input.view :as text-input]
-            [status-im.ui.components.colors :as colors])
-  (:require-macros [status-im.utils.views :as views]))
+            [status-im.ui.components.colors :as colors]
+            [status-im.utils.debounce :as debounce])
+    (:require-macros [status-im.utils.views :as views]))
 
 (defn separator []
   [react/view (styles/separator)])
@@ -27,7 +28,7 @@
    [topbar/text-action
     {:disabled? (string/blank? content)
      :style     {:margin-right 16}
-     :handler   #(re-frame/dispatch [:wallet.send/set-recipient content])}
+     :handler   #(debounce/dispatch-and-chill [:wallet.send/set-recipient content] 3000)}
     (i18n/label :t/done)]])
 
 (views/defview contact-code []
