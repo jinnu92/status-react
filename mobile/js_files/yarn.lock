@@ -2899,7 +2899,12 @@ hasha@^3.0.0:
   dependencies:
     is-stream "^1.0.1"
 
-hermes-engine@0.2.1, hermes-engine@^0.2.1:
+hermes-engine@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/hermes-engine/-/hermes-engine-0.7.0.tgz#c4a13e09811d7bc975a0662bd2ca7120003d6ef8"
+  integrity sha512-lU9OenFWXXOzYldqn15QvbiD0kDc+uw2arhCOkR+9D+PhrLFcbEqnaXFESgchN77JYEf77KkqXncTZA8aoXw2A==
+
+hermes-engine@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/hermes-engine/-/hermes-engine-0.2.1.tgz#25c0f1ff852512a92cb5c5cc47cf967e1e722ea2"
   integrity sha512-eNHUQHuadDMJARpaqvlCZoK/Nitpj6oywq3vQ3wCwEsww5morX34mW5PmKWQTO7aU0ck0hgulxR+EVDlXygGxQ==
